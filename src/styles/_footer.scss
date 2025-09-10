@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  width: 450px;
+  height: 47px;
+  justify-content: center;
+  gap: 18px;
+  flex-shrink: 0;
+  background-color: #fbf9fb;
+  a {
+    width: 215px;
+    height: 47px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #b3634f;
+    img{
+      width: 30px;
+     
+      
+    }
+  }
+}
