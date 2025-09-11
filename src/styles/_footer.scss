@@ -1,21 +1,34 @@
 .footer {
-  display: flex;
-  width: 450px;
-  height: 47px;
-  justify-content: center;
-  gap: 18px;
-  flex-shrink: 0;
+  width: 1163px;
+  height: 144px;
   background-color: #fbf9fb;
-  a {
-    width: 215px;
-    height: 47px;
-    flex-shrink: 0;
-    text-decoration: none;
-    color: #b3634f;
-    img{
-      width: 30px;
-     
-      
+  &__container {
+    padding-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 62px;
+      height: 58px;
+      aspect-ratio: 31/29;
+    }
+    a {
+      color: #b3644e;
+      font-family: 'Gilda Display';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-left: 5px;
+    }
+    &--linkedin{
+      display: flex;
+      align-items: center;
+      margin-left: 490px;
+    }
+    &--git{
+      display: flex;
+      align-items: center;
     }
   }
 }
