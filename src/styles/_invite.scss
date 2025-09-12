@@ -5,13 +5,22 @@
   flex-shrink: 0;
   position: relative;
   background-color: #fbf9fb;
+  @media (max-width: 440px) {
+    width: 440px;
+    height: 201px;
+    flex-direction: column;
+    background-color: transparent;
+  }
   &__text {
     width: 572px;
     height: 62px;
     margin: 18px auto;
     background-color: #b3634f;
+    @media (max-width: 440px) {
+      width: 100%;
+    }
     h1 {
-        margin:7px auto;
+      margin: 7px auto;
       text-align: center;
       color: #f5f5f5;
       font-family: "Gilda Display";
@@ -19,6 +28,40 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      @media (max-width: 440px) {
+        font-size: 24px;
+        margin: 21px auto;
+      }
+    }
+  }
+  &__local {
+    margin:auto;
+    @media (max-width: 440px) {
+      address {
+        color: #b3634f;
+        font-family: "Gilda Display";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  &__button {
+    
+    @media (max-width: 440px) {
+      margin:auto;
+      button {
+        width: 197px;
+        height: 34px;
+        background-color: #b3634f;
+        color: #f5f5f5;
+        font-family: 'Gilda Display';
+        font-size: 20px;
+        font-weight: 400;
+        border: none;
+        border-radius: 20px;
+      }
     }
   }
   &__canva {
@@ -26,5 +69,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    @media (max-width: 440px) {
+      visibility: hidden;
+    }
   }
 }

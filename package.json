@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/index.html src/scripts/main.js src/styles/main.scss",
+    "dev": "parcel src/index.html src/scripts/main.js src/styles/*.scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +12,13 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
     "parcel": "^2.15.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enge-Olate/convite_aniversario.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Enge-Olate/convite_aniversario/issues"
+  },
+  "homepage": "https://github.com/Enge-Olate/convite_aniversario#readme"
 }
