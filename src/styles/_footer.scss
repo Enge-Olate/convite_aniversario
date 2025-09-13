@@ -2,33 +2,48 @@
   width: 1163px;
   height: 144px;
   background-color: #fbf9fb;
+  @media (max-width: 768px) {
+    width: 366px;
+    height: 56px;
+  }
   &__container {
     padding-top: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+      display: inline-flex;
+      padding: 10px 11px;
+      align-items: flex-end;
+      gap: 94px;
+      div{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
     img {
       width: 62px;
       height: 58px;
       aspect-ratio: 31/29;
+      @media (max-width: 768px) {
+        width: 36px;
+        height: 32px;
+        aspect-ratio:9/8;
+      }
     }
     a {
       color: #b3644e;
-      font-family: 'Gilda Display';
+      font-family: "Gilda Display";
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
       margin-left: 5px;
-    }
-    &--linkedin{
-      display: flex;
-      align-items: center;
-      margin-left: 490px;
-    }
-    &--git{
-      display: flex;
-      align-items: center;
+      @media (max-width: 768px ) {
+        font-size: 12px;
+        
+      }
     }
   }
 }

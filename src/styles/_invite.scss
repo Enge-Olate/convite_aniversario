@@ -5,7 +5,7 @@
   flex-shrink: 0;
   position: relative;
   background-color: #fbf9fb;
-  @media (max-width: 440px) {
+  @media (max-width: 768px) {
     width: 440px;
     height: 201px;
     flex-direction: column;
@@ -16,7 +16,7 @@
     height: 62px;
     margin: 18px auto;
     background-color: #b3634f;
-    @media (max-width: 440px) {
+    @media (max-width: 768px) {
       width: 100%;
     }
     h1 {
@@ -28,7 +28,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      @media (max-width: 440px) {
+      @media (max-width: 768px) {
         font-size: 24px;
         margin: 21px auto;
       }
@@ -36,7 +36,7 @@
   }
   &__local {
     margin:auto;
-    @media (max-width: 440px) {
+    @media (max-width: 768px) {
       address {
         color: #b3634f;
         font-family: "Gilda Display";
