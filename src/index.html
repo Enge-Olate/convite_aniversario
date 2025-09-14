@@ -28,7 +28,10 @@
         <h1></h1>
       </div>
       <div class="invite__info">
-        <address><img src="/src/imagens/Vector.png" alt="Localização">Sítio Pão Queijo</address>
+        <address>
+          <img src="/src/imagens/Vector.png" alt="Localização" />Sítio Pão
+          Queijo
+        </address>
         <span>20h</span>
         <div class="invite__info__button">
           <button type="button">Confirmar presença</button>
@@ -49,6 +52,30 @@
           stroke-width="1px"
         />
       </svg>
+    </section>
+    <section class="formulario">
+      <form class="formulario__container">
+        <div class="formulario__container--titulo">
+          <h2>Confirme sua presença</h2>
+        </div>
+        <div class="formulario__container--inputs">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="formulario__container--inputs">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required />
+        </div>
+        <div class="formulario__container--inputs">
+          <label for="presenca">Você irá comparecer?</label>
+          <select id="presenca" name="presenca" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+        <button type="submit">Confirmar</button>   
+
     </section>
     <footer class="footer">
       <div class="footer__container">
