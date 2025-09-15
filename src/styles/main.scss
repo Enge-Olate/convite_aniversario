@@ -1,9 +1,9 @@
 @use "header";
 @use "reset";
+@use "invite";
 @use "formulario";
 @use "footer";
 @use 'convite';
-@use "invite";
 body {
   background: linear-gradient(
     180deg,

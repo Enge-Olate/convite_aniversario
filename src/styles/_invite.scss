@@ -48,12 +48,16 @@
     align-items: center;
     justify-content: space-around;
     background: #fbfafb;
-    font-size: 24px;
+    font-size: 26px;
     font-family: "Gilda Display";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
     color: #b3634f;
+    img{
+      width:25px;
+      height: 25px;
+    }
     @media (max-width: 768px) {
       width: 100%;
       display: flex;

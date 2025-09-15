@@ -9,8 +9,12 @@
   &__container {
     padding-top: 36px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    div{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
     @media (max-width: 768px) {
       display: inline-flex;
       padding: 10px 11px;
