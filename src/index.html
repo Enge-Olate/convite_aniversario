@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles/main.scss" />
     <title>Convite</title>
   </head>
@@ -34,7 +35,7 @@
         </address>
         <span>20h</span>
         <div class="invite__info__button">
-          <button type="button">Confirmar presença</button>
+          <button id="button-form" type="button">Confirmar presença</button>
         </div>
       </div>
       <svg
@@ -53,8 +54,9 @@
         />
       </svg>
     </section>
-    <section class="formulario">
-      <form class="formulario__container">
+    <section class="formulario formulario--is-active" data-aos="fade-up" >
+      
+      <form class="formulario__container" data-aos="out" >
         <div class="formulario__container--titulo">
           <h2>Confirme sua presença</h2>
         </div>
@@ -74,9 +76,15 @@
             <option value="nao">Não</option>
           </select>
         </div>
-        <button type="submit">Confirmar</button>   
+        <button id="botao-confirmacao" type="submit">Confirmar</button>   
 
     </section>
+    <section class="positivo positivo--is-active" data-aos= "flip-right">
+        <h1>Obrigaro por confirmar sua presença!</h1>
+    </section>
+    <section class="negativo negativo--is-active" data-aos="flip-left">
+        <h1>Hum..., não vai vir? Que pena, mas tudo bem. Agradecemos por avisar.</h1>
+      </section>
     <footer class="footer">
       <div class="footer__container">
         <div>
@@ -89,6 +97,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/src/scripts/main.js"></script>
   </body>
 </html>
