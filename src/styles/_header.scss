@@ -11,6 +11,7 @@
     height: 123px;
     position: relative;
   }
+ 
   &__opacidade::before{
     position: absolute;
     width: 100%;
@@ -31,5 +32,6 @@
       height: 33px;
       position: absolute;
     }
+    
   }
 }
