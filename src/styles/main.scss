@@ -2,10 +2,10 @@
 @use "header";
 @use "reset";
 @use "formulario";
+@use"negativo";
 @use "footer";
 @use 'convite';
 @use "positivo";
-@use"negativo";
 body {
   background: linear-gradient(
     180deg,

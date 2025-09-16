@@ -1,23 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const botao = document.getElementById("button-form");
+  const formulario = document.querySelector(".formulario");
+  const selecao = document.getElementById("presenca");
+  const mensagemSim = document.querySelector(".positivo");
+  const mensagemNao = document.querySelector(".negativo");
+  const entradas = document.querySelectorAll("input");
   const botaoConfirmacao = document.getElementById("botao-confirmacao");
-  botao.addEventListener("click", () => {
-    const formulario = document.querySelector(".formulario");
+  const botao = document.getElementById("button-form");
+  const fieldset = document.getElementById("formulario-fieldset");
+  console.log(fieldset);
+  botao.addEventListener("click", (e) => {
+    e.preventDefault();
     formulario.classList.remove("formulario--is-active");
-    AOS.init({ duration: 800, once:true});
+    AOS.init({ duration: 800, once: false });
     setTimeout(() => {
       AOS.refresh();
     }, 150);
   });
-  botaoConfirmacao.addEventListener('click', ()=>{
-    const mensagemSim = document.querySelector(".positivo");
-    const mensagemNao = document.querySelector(".negativo");
-    mensagemSim.classList.remove("positivo--is-active");
-    mensagemNao.classList.remove("negativo--is-active");
-    AOS.init({ duration: 800, once:true});
-    setTimeout(() => {
-      AOS.refresh();
-    }, 150);
+
+  botaoConfirmacao.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (
+        entradas[0].value === "" ||
+        entradas[1].value === "" ||
+        selecao.value === ""
+    ) {
+        alert(
+            "Por favor, preencha todos os campos antes de confirmar sua presença."
+        );
+        return;
+    }
+    
+    if (selecao.value === "nao") {
+        mensagemNao.classList.remove("negativo--is-active");
+        mensagemSim.classList.add("positivo--is-active");
+        AOS.init({ duration: 800, once: false });
+        setTimeout(() => {
+            AOS.refresh();
+        }, 150);
+    } else {
+        mensagemSim.classList.remove("positivo--is-active");
+        mensagemNao.classList.add("negativo--is-active");
+        
+        AOS.init({ duration: 800, once: false });
+        setTimeout(() => {
+            AOS.refresh();
+        }, 150);
+    }
+    fieldset.disabled = true;
   });
   const aniversario = new Date("Sep 17, 2025 20:00:00");
   const tempoAniversario = aniversario.getTime();
@@ -43,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     if (diferenca < 0) {
       clearInterval(contandoHoras);
-      document.querySelector("p").innerHTML = "Expirado!";
+      document.querySelector("h1").innerHTML = "Expirado!";
     }
   }, 1000);
 });
