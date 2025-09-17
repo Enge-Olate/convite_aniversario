@@ -14,6 +14,11 @@
     width: 90%;
     padding: 10px;
   }
+  @media ((min-width:769px) and (max-width:1280px)) {
+    width: 80%;
+    padding: 15px;
+    
+  }
   &__positivo {
     background-color: #fbf9fb;
     border-radius: 5px;

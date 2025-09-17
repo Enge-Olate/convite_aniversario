@@ -16,6 +16,11 @@
     gap: 39px;
     background-color: transparent;
   }
+  @media ((min-width:769px) and (max-width:1280px)) {
+    width: 100%;
+    position: relative;
+    
+  }
   &__text {
     width: 572px;
     height: 62px;
@@ -64,6 +69,13 @@
       gap: 20px;
       font-size: 20px;
     }
+    @media ((min-width:769px) and (max-width:1280px)) {
+      width: 90%;
+      padding: 12px 20px;
+      margin: 0 auto;
+      font-size: 22px;
+      
+    }
     &__button {
       @media (max-width: 768px) {
         display: flex;
@@ -97,11 +109,16 @@
   &__canva {
     width: 100%;
     position: absolute;
-    // padding-top: 78px;
     bottom: 0;
     left: 0;
     @media (max-width: 768px) {
       visibility: hidden;
+    }
+    @media ((min-width:769px) and (max-width:1024px)) {
+      width: 100%;
+      position: absolute;
+      bottom: -30px;
+      left: 0;
     }
   }
 }
