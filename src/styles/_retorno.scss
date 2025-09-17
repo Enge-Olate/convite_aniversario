@@ -1,0 +1,55 @@
+.retorno {
+  width: 1158px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  gap: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  &--is-active {
+   display: none;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+  }
+  &__positivo {
+    background-color: #fbf9fb;
+    border-radius: 5px;
+    padding: 5px;
+    &--is-ok {
+      display: none;
+    }
+    h1 {
+      font-family: "Gilda Display";
+      font-size: 40px;
+      color: #b3644e;
+      font-weight: 700;
+      text-align: center;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+  &__negativo {
+    &--is-no {
+      display: none;
+    }
+    background-color: #b3644e;
+    border-radius: 5px;
+    padding: 5px;
+    h1 {
+      font-family: "Gilda Display";
+      font-size: 40px;
+      color: #fbf9fb;
+      font-weight: 700;
+      text-align: center;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+}

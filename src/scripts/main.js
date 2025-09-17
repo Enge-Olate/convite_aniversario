@@ -1,14 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.querySelector(".formulario");
-  const selecao = document.getElementById("presenca");
-  const mensagemSim = document.querySelector(".positivo");
-  const mensagemNao = document.querySelector(".negativo");
-  const entradas = document.querySelectorAll("input");
-  const botaoConfirmacao = document.getElementById("botao-confirmacao");
-  const botao = document.getElementById("button-form");
-  const fieldset = document.getElementById("formulario-fieldset");
-  console.log(fieldset);
-  botao.addEventListener("click", (e) => {
+  const botaoFormulario = document.getElementById("button-form");
+  botaoFormulario.addEventListener("click", (e) => {
+    const formulario = document.querySelector(".formulario");
     e.preventDefault();
     formulario.classList.remove("formulario--is-active");
     AOS.init({ duration: 800, once: false });
@@ -16,35 +9,43 @@ document.addEventListener("DOMContentLoaded", function () {
       AOS.refresh();
     }, 150);
   });
-
+  const botaoConfirmacao = document.getElementById("botao-confirmacao");
+  const retorno = document.querySelector(".retorno");
+  const retornoSim = document.querySelector(".retorno__positivo--is-ok");
+  const retornoNao = document.querySelector(".retorno__negativo--is-no");
+  const entradas = document.querySelectorAll("input");
+  const selecao = document.getElementById("presenca");
+  const fieldset = document.getElementById("formulario-fieldset");
   botaoConfirmacao.addEventListener("click", (e) => {
     e.preventDefault();
+
     if (
-        entradas[0].value === "" ||
-        entradas[1].value === "" ||
-        selecao.value === ""
+      entradas[0].value === "" ||
+      entradas[1].value === "" ||
+      selecao.value === ""
     ) {
-        alert(
-            "Por favor, preencha todos os campos antes de confirmar sua presença."
-        );
-        return;
+      alert(
+        "Por favor, preencha todos os campos antes de confirmar sua presença."
+      );
+      return;
     }
-    
+
     if (selecao.value === "nao") {
-        mensagemNao.classList.remove("negativo--is-active");
-        mensagemSim.classList.add("positivo--is-active");
-        AOS.init({ duration: 800, once: false });
-        setTimeout(() => {
-            AOS.refresh();
-        }, 150);
+      retorno.classList.remove("retorno--is-active");
+      retornoNao.classList.remove("retorno__negativo--is-no");
+      retornoSim.classList.add("retorno__positivo--is-ok");
+      AOS.init({ duration: 800, once: false });
+      setTimeout(() => {
+        AOS.refresh();
+      }, 150);
     } else {
-        mensagemSim.classList.remove("positivo--is-active");
-        mensagemNao.classList.add("negativo--is-active");
-        
-        AOS.init({ duration: 800, once: false });
-        setTimeout(() => {
-            AOS.refresh();
-        }, 150);
+      retorno.classList.remove("retorno--is-active");
+      retornoNao.classList.add("retorno__negativo--is-no");
+      retornoSim.classList.remove("retorno__positivo--is-ok");
+      AOS.init({ duration: 800, once: false });
+      setTimeout(() => {
+        AOS.refresh();
+      }, 150);
     }
     fieldset.disabled = true;
   });

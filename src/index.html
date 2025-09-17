@@ -73,7 +73,7 @@
           <div class="formulario__container--inputs">
             <label for="presenca">Você irá comparecer?</label>
             <select id="presenca" name="presenca" required>
-              <option value="" disabled selected></option>
+              <option value="" disabled selected>Selecione aqui</option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
@@ -82,11 +82,13 @@
         <button id="botao-confirmacao" type="submit">Confirmar</button>   
 
     </section>
-    <section class="positivo positivo--is-active" data-aos= "fade-up">
-        <h1>Obrigaro por confirmar sua presença!</h1>
-    </section>
-    <section class="negativo negativo--is-active" data-aos="fade-up">
-        <h1>Hum..., não vai vir? Que pena, mas tudo bem. Agradecemos por avisar.</h1>
+    <section class="retorno retorno--is-active" >
+        <div class="retorno__positivo retorno__positivo--is-ok">
+          <h1>Que ótimo! Estamos felizes com sua confirmação. Nos vemos lá!</h1>
+        </div>
+        <div class="retorno__negativo retorno__negativo--is-no">
+          <h1>Hum..., não vai vir? Que pena, mas tudo bem. Agradecemos por avisar.</h1>
+        </div>
       </section>
     <footer class="footer">
       <div class="footer__container">
